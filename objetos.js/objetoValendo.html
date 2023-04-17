@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Valendo</title>
+</head>
+<body>
+
+    <script>
+        //Criação de objeto com chave/valor
+        const produto = new Object
+        produto.nome = 'cadeira'
+        produto['marca produto'] = 'Genética'
+        produto.preco = 200
+        console.log(produto)
+
+        delete produto.preco
+        delete produto['marca produto']
+        console.log(produto)
+
+        const carro = {
+            modelo: 'A4',
+            valor: 89000,
+            proprietario:{
+                nome: 'jhonata',
+                idade: 39,
+                endereco:{
+                    logradouro: 'Rua ABC',
+                    numero: 123,
+                },
+            },
+            condutores:[{
+                nome: 'junior',
+                idade: 19
+            }, {
+                nome: 'Ana',
+                idade: 49
+            }],
+
+            calcularValorSeguro(){
+                //...
+            }
+        }
+
+        console.log(carro.proprietario.nome)
+        console.log(carro.proprietario.endereco.logradouro)
+        console.log(carro.condutores[1].nome)
+        console.log(carro.condutores.forEach((nome) => {
+            console.log(nome.idade)
+        }))
+    </script>
+
+</body>
+</html>
